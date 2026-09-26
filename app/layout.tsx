@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: "Wahab — Developer & Learner",
     template: "%s — Wahab",
   },
-  description: "Portfolio, learning log, and public curriculum documenting a self-taught developer's path from foundations through full-stack — real projects, real lessons, real progress.",
+  description: "Portfolio, learning log, and public curriculum documenting a self-taught developer's path from foundations through full-stack.",
  openGraph: {
   siteName: "Wahab",
   type: "website",
