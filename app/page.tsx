@@ -1,69 +1,85 @@
-import Image from "next/image";
+import Link from "next/link";
+import { getAllArticles } from "@/lib/content";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+    <main id="main-content">
+      {/* Hero */}
+      <section style={{ padding: "6rem 2rem 4rem", maxWidth: "48rem" }}>
+        <p style={{ fontFamily: "var(--font-mono)", color: "var(--accent)", fontSize: "0.875rem", marginBottom: "1rem" }}>
+          WAHAB ADEWALE — DEVELOPER, LEARNER, BUILDER
+        </p>
+        <h1 style={{ fontFamily: "var(--font-display)", fontSize: "3.5rem", lineHeight: 1.1, marginBottom: "1.5rem" }}>
+          Building my way into full-stack engineering — in public.
+        </h1>
+        <p style={{ fontFamily: "var(--font-body)", color: "var(--muted)", fontSize: "1.125rem", lineHeight: 1.6, marginBottom: "2rem" }}>
+          This site is my portfolio, my learning log, and a growing curriculum —
+          documenting what I build and what I learn as I go, without pretending
+          to know more than I do yet.
+        </p>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <a href="/projects" style={{ padding: "0.75rem 1.5rem", background: "var(--foreground)", color: "var(--background)", borderRadius: "2px" }}>
+            See my work
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="/learn" style={{ padding: "0.75rem 1.5rem", border: "1px solid var(--border)", borderRadius: "2px" }}>
+            Follow the learning journey
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Current focus */}
+      <section style={{ padding: "3rem 2rem", borderTop: "1px solid var(--border)", maxWidth: "48rem" }}>
+        <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1rem" }}>
+          CURRENTLY
+        </h2>
+        <p style={{ fontFamily: "var(--font-body)", fontSize: "1.125rem" }}>
+          [CURRENT FOCUS — e.g. "Building an offline-first PWA for campus navigation at OOU"]
+        </p>
+      </section>
+
+      {/* Selected work */}
+      <section style={{ padding: "3rem 2rem", borderTop: "1px solid var(--border)", maxWidth: "48rem" }}>
+        <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+          SELECTED WORK
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+          <div>
+            <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem" }}>[PROJECT NAME]</h3>
+            <p style={{ color: "var(--muted)" }}>[One-line description of the problem it solves]</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section style={{ padding: "3rem 2rem", borderTop: "1px solid var(--border)", maxWidth: "48rem" }}>
+        <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1rem" }}>
+          HOW I LEARN
+        </h2>
+        <p style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", lineHeight: 1.4 }}>
+          Learn how to learn, not how to copy code.
+        </p>
+      </section>
+
+    {/* Recent writing */}
+<section className="container" style={{ padding: "3rem 0", borderTop: "1px solid var(--border)" }}>
+  <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+    RECENT WRITING
+  </h2>
+  {getAllArticles().slice(0, 2).map(({ frontmatter }) => (
+    <Link key={frontmatter.slug} href={`/articles/${frontmatter.slug}`} style={{ display: "block", marginBottom: "1rem" }}>
+      <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem" }}>{frontmatter.title}</h3>
+      <p style={{ color: "var(--muted)" }}>{frontmatter.description}</p>
+    </Link>
+  ))}
+</section>
+
+      {/* Final CTA */}
+      <section style={{ padding: "4rem 2rem", borderTop: "1px solid var(--border)", maxWidth: "48rem" }}>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2rem", marginBottom: "1rem" }}>
+          Let's talk.
+        </h2>
+        <a href="/contact" style={{ color: "var(--accent)" }}>Get in touch →</a>
+      </section>
+    </main>
   );
 }
