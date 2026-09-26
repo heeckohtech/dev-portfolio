@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dev-portfolio.vercel.app"), // update once you know your real Vercel URL
+  metadataBase: new URL("https://dev-portfolio-beta-sandy.vercel.app"), // update once you know your real Vercel URL
   title: {
     default: "Wahab — Developer & Learner",
     template: "%s — Wahab",

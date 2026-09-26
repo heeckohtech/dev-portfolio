@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllProjects, getAllArticles, getAllCourses, getLessonsForCourse } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://dev-portfolio.vercel.app"; // update to match metadataBase
+  const baseUrl = "https://dev-portfolio-beta-sandy.vercel.app"; // update to match metadataBase
 
   const staticRoutes = ["", "/about", "/projects", "/learn", "/articles", "/journey", "/contact"].map((route) => ({
     url: `${baseUrl}${route}`,

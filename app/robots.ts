@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dev-portfolio.vercel.app/sitemap.xml", // update to match metadataBase
+    sitemap: "https://dev-portfolio-beta-sandy.vercel.app/sitemap.xml", // update to match metadataBase
   };
 }
