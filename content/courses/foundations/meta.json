@@ -1,0 +1,9 @@
+{
+  "slug": "foundations",
+  "title": "Developer Foundations",
+  "description": "The tools and habits every developer needs before writing a line of application code.",
+  "level": "beginner",
+  "category": "foundations",
+  "status": "in-progress",
+  "order": 1
+}

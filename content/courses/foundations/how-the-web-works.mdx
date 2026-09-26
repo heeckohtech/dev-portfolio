@@ -1,0 +1,91 @@
+---
+title: "How the Web Works"
+slug: "how-the-web-works"
+course: "foundations"
+module: "The Basics"
+difficulty: "beginner"
+estimatedTime: 20
+status: "published"
+order: 1
+prerequisites: []
+tags: ["networking", "browsers", "http"]
+documentationLinks:
+  - label: "MDN: How the web works"
+    url: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works"
+readingQuestions:
+  - "What happens between typing a URL and seeing a page?"
+  - "What is a DNS lookup?"
+  - "What's the difference between HTTP and HTTPS?"
+---
+
+## Concept
+
+[EXPLAIN: client, server, request, response, DNS, HTTP — in your own words once you've learned it]
+
+## Mini Lesson
+
+[YOUR SUMMARY OF THE CORE IDEA]
+
+## Read Documentation
+
+Before continuing, find the answers to:
+
+1. What happens between typing a URL and seeing a page?
+2. What is a DNS lookup?
+3. What's the difference between HTTP and HTTPS?
+
+## Guided Exercise
+
+[A SMALL GUIDED TASK]
+
+## Independent Challenge
+
+[A TASK WITH LESS HAND-HOLDING]
+
+## Debugging
+
+[A DELIBERATELY BROKEN SCENARIO TO DIAGNOSE]
+
+## Project
+
+[A SMALL BUILD THAT APPLIES THIS CONCEPT]
+
+## Code Review
+
+Run through the checklist below before considering this project done.
+
+## Document What You Learned
+
+[SPACE FOR YOUR OWN REFLECTION]
+
+debugChallenge:
+  brokenCode: |
+    fetch("/api/user")
+      .then(res => res.json)
+      .then(data => console.log(data));
+  hints:
+    - "Look closely at the second .then() — what type is res.json without parentheses?"
+    - "res.json is a method, not a value. Calling it without () passes the function itself, not its result."
+    - "You need res.json() — calling it — since it returns a Promise that resolves to the parsed data."
+  solution: |
+    fetch("/api/user")
+      .then(res => res.json())
+      .then(data => console.log(data));
+  solutionExplanation: "res.json is a method that must be called to actually parse the response body. Without the parentheses, you're passing the function reference itself into the next .then(), not the parsed data."
+
+  projectAssignment:
+  title: "Inspect a Real Website"
+  problem: "You now understand requests and responses conceptually — but reading about it isn't the same as watching it happen."
+  requirements:
+    - "Pick any live website you use regularly."
+    - "Open DevTools and reload the page with the Network tab open."
+    - "Record the total number of requests and the total page weight in KB."
+    - "Identify which single request took the longest, and explain why (DNS, server processing, large file, etc.)."
+  constraints:
+    - "Do this on a site you didn't already inspect in the Guided Exercise or Independent Challenge above."
+  suggestedTech: []
+  acceptanceCriteria:
+    - "You can name the total request count and total page weight."
+    - "You can explain, in your own words, what made the slowest request slow."
+  stretchGoals:
+    - "Compare the same site on a throttled 'Slow 3G' network setting in DevTools — how much worse does it get?"

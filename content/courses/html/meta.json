@@ -1,0 +1,9 @@
+{
+  "slug": "html",
+  "title": "HTML",
+  "description": "Document structure, semantics, and accessibility — the foundation everything else builds on.",
+  "level": "beginner",
+  "category": "language",
+  "status": "planned",
+  "order": 2
+}
