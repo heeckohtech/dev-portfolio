@@ -28,11 +28,14 @@ export const metadata: Metadata = {
     default: "Wahab — Developer & Learner",
     template: "%s — Wahab",
   },
-  description: "Portfolio and public learning journey toward full-stack development.",
-  openGraph: {
-    siteName: "Wahab",
-    type: "website",
-  },
+  description: "Portfolio, learning log, and public curriculum documenting a self-taught developer's path from foundations through full-stack — real projects, real lessons, real progress.",
+ openGraph: {
+  siteName: "Wahab",
+  type: "website",
+},
+twitter: {
+  card: "summary_large_image",
+},
 };
 
 export default function RootLayout({
