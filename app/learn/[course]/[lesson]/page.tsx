@@ -52,7 +52,7 @@ export default async function LessonPage({
 
   return (
     <main id="main-content"
-      className="container"
+      className="container prose"
       style={{
         paddingBlock: "4rem",
         maxWidth: "42rem",
@@ -75,7 +75,7 @@ export default async function LessonPage({
       <h1
         style={{
           fontFamily: "var(--font-display)",
-          fontSize: "2.5rem",
+          fontSize: "var(--text-h1)",
           marginBottom: "1rem",
         }}
       >

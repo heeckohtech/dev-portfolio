@@ -3,6 +3,13 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllProjects, getProjectBySlug } from "@/lib/content";
 import type { Metadata } from "next";
 
+const statusLabels: Record<string, string> = {
+  planned: "Planned",
+  "in-progress": "In Progress",
+  updating: "Updating",
+  complete: "Complete",
+}; 
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
@@ -30,11 +37,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound();
 
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem", maxWidth: "42rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem", maxWidth: "42rem" }}>
       <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--accent)", textTransform: "uppercase" }}>
-        {project.frontmatter.status}
+        {statusLabels[project.frontmatter.status]}
       </span>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBlock: "1rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBlock: "1rem" }}>
         {project.frontmatter.title}
       </h1>
       <p style={{ color: "var(--muted)", marginBottom: "2rem" }}>{project.frontmatter.description}</p>

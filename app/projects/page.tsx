@@ -9,13 +9,19 @@ export const metadata: Metadata = {
   description: "Selected projects — problems solved, technologies used, and lessons learned building them.",
 };
 
+const statusLabels: Record<string, string> = {
+  planned: "Planned",
+  "in-progress": "In Progress",
+  updating: "Updating",
+  complete: "Complete",
+};
 
 export default function ProjectsPage() {
   const projects = getAllProjects();
 
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem" }}>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBottom: "2rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBottom: "2rem" }}>
         Work
       </h1>
       <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>

@@ -31,11 +31,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) notFound();
 
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem", maxWidth: "42rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem", maxWidth: "42rem" }}>
       <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--muted)" }}>
         {new Date(article.frontmatter.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
       </span>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBlock: "1rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBlock: "1rem" }}>
         {article.frontmatter.title}
       </h1>
       <div style={{ display: "flex", gap: "0.5rem", marginBottom: "2rem" }}>

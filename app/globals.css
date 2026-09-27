@@ -75,3 +75,35 @@ textarea:focus-visible {
 .skip-link:focus {
   top: 0;
 }
+
+/* Fluid headings so text scales smoothly instead of overflowing on small screens */
+:root {
+  --text-hero: clamp(2rem, 6vw, 3.5rem);
+  --text-h1: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+/* Long words and links must never force horizontal scrolling on mobile */
+body {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Justified body copy on wider screens; ragged word spacing on a narrow phone
+   column looks worse than left-aligned, so it justifies only from tablet width up */
+.prose p {
+  text-align: left;
+  line-height: 1.75;
+}
+@media (min-width: 640px) {
+  .prose p {
+    text-align: justify;
+  }
+}
+
+/* Form fields were sizing to the browser default (roughly 20 characters wide)
+   rather than filling their container — this was likely part of what read as
+   unpolished, and it would have looked cramped on mobile specifically */
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+}

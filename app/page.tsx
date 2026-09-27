@@ -7,15 +7,15 @@ export default function Home() {
       {/* Hero */}
       <section style={{ padding: "6rem 2rem 4rem", maxWidth: "48rem" }}>
         <p style={{ fontFamily: "var(--font-mono)", color: "var(--accent)", fontSize: "0.875rem", marginBottom: "1rem" }}>
-          WAHAB ADEWALE — DEVELOPER, LEARNER, BUILDER
+          WAHAB: DEVELOPER, LEARNER, BUILDER
         </p>
-        <h1 style={{ fontFamily: "var(--font-display)", fontSize: "3.5rem", lineHeight: 1.1, marginBottom: "1.5rem" }}>
-          Building my way into full-stack engineering — in public.
+        <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-hero)", lineHeight: 1.1, marginBottom: "1.5rem" }}>
+        Building my way into full stack engineering, in public.
         </h1>
         <p style={{ fontFamily: "var(--font-body)", color: "var(--muted)", fontSize: "1.125rem", lineHeight: 1.6, marginBottom: "2rem" }}>
-          This site is my portfolio, my learning log, and a growing curriculum —
-          documenting what I build and what I learn as I go, without pretending
-          to know more than I do yet.
+         This site is my portfolio, my learning log and a growing curriculum,
+documenting what I build and what I learn as I go, without pretending
+to know more than I do yet.
         </p>
         <div style={{ display: "flex", gap: "1rem" }}>
           <a href="/projects" style={{ padding: "0.75rem 1.5rem", background: "var(--foreground)", color: "var(--background)", borderRadius: "2px" }}>
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
     {/* Recent writing */}
-<section className="container" style={{ padding: "3rem 0", borderTop: "1px solid var(--border)" }}>
+<section className="container prose" style={{ padding: "3rem 0", borderTop: "1px solid var(--border)" }}>
   <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
     RECENT WRITING
   </h2>

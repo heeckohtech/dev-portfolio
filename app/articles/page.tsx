@@ -13,8 +13,8 @@ export default function ArticlesPage() {
   const articles = getAllArticles();
 
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem" }}>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBottom: "2rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBottom: "2rem" }}>
         Articles
       </h1>
       <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>

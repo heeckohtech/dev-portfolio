@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem", maxWidth: "42rem" }}>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBottom: "3rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem", maxWidth: "42rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBottom: "3rem" }}>
         About
       </h1>
 
@@ -35,15 +35,15 @@ export default function AboutPage() {
         </h2>
         <p style={{ lineHeight: 1.7, marginBottom: "1rem" }}>
           I build practical digital solutions with a particular focus on web applications,
-          educational technology, research tools, productivity systems, and student-centred
+          educational technology, research tools, productivity systems, and platforms built around the needs of students.
           platforms.
         </p>
         <p style={{ lineHeight: 1.7, color: "var(--muted)" }}>
-          Through HEECKOH VENTURES, I&apos;m developing a broader vision of technology-driven
-          services that combine software development, academic research support, data
-          analysis, and digital innovation — grounded in a simple principle: technology
-          should address a clearly defined problem and provide a meaningful solution to
-          its users.
+          Through HEECKOH VENTURES, I&apos;m developing a broader vision of services driven
+by technology, combining software development, academic research support, data
+analysis and digital innovation. The guiding principle is simple: technology
+should address a clearly defined problem and provide a meaningful solution to
+its users.
         </p>
       </section>
 
@@ -54,14 +54,13 @@ export default function AboutPage() {
         <p style={{ lineHeight: 1.7, marginBottom: "1rem" }}>
           My learning extends beyond software development alone. I&apos;m deliberately
           developing a multidisciplinary skill set that includes software engineering,
-          UI/UX design, data analysis, quantitative and qualitative research, digital
-          design, and professional productivity — including modern web development,
+          UI/UX design, data analysis, quantitative and qualitative research, digital design and professional productivity, including modern web development,
           databases, Git and GitHub, deployment, SPSS, Figma, and other digital design tools.
         </p>
         <p style={{ lineHeight: 1.7, color: "var(--muted)" }}>
           More importantly, I&apos;m committed to understanding the principles behind the
           technologies I use. I don&apos;t want to become dependent on AI to think or solve
-          problems on my behalf — I want to reason independently, understand problems
+          problems on my behalf. Instead, I want to reason independently, understand problems
           deeply, and use AI as an auxiliary tool rather than a substitute for intellectual
           effort.
         </p>
@@ -72,13 +71,12 @@ export default function AboutPage() {
           HOW I THINK
         </h2>
         <p style={{ lineHeight: 1.7, marginBottom: "1rem" }}>
-          I approach problems analytically and systematically — starting with the problem
+          I approach problems analytically and systematically, starting with the problem
           itself: what is wrong, why does it exist, who is affected, what is currently
           missing, and what constitutes an appropriate solution.
         </p>
         <p style={{ lineHeight: 1.7, color: "var(--muted)" }}>
-          I&apos;m interested in understanding the reasoning behind a solution, not just
-          completing a project — considering its usefulness, sustainability, scalability,
+          I&apos;m interested in understanding the reasoning behind a solution, not just completing a project, and I consider its usefulness, sustainability, scalability,
           and potential impact.
         </p>
       </section>
@@ -89,9 +87,7 @@ export default function AboutPage() {
         </h2>
         <p style={{ lineHeight: 1.7 }}>
           Currently, I&apos;m developing HEECKOH VENTURES, building expertise in
-          quantitative and qualitative research, and working on an offline-first
-          Progressive Web Application for campus service information and navigation in
-          low-bandwidth environments, using Olabisi Onabanjo University as a case study.
+          quantitative and qualitative research, and working on an offline first Progressive Web Application for campus service information and navigation in low bandwidth environments, using Olabisi Onabanjo University as a case study.
         </p>
       </section>
     </main>

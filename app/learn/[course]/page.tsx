@@ -28,11 +28,11 @@ export default async function CoursePage({ params }: { params: Promise<{ course:
   const lessons = getLessonsForCourse(courseSlug);
 
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem" }}>
       <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--accent)", textTransform: "uppercase" }}>
         {course.level}
       </span>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBlock: "1rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBlock: "1rem" }}>
         {course.title}
       </h1>
       <p style={{ color: "var(--muted)", marginBottom: "3rem" }}>{course.description}</p>

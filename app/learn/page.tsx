@@ -19,8 +19,8 @@ export default function LearnPage() {
   const courses = getAllCourses();
 
   return (
-    <main id="main-content" className="container" style={{ paddingBlock: "4rem" }}>
-      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "2.5rem", marginBottom: "0.5rem" }}>
+    <main id="main-content" className="container prose" style={{ paddingBlock: "4rem" }}>
+      <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h1)", marginBottom: "0.5rem" }}>
         Learning Roadmap
       </h1>
       <p style={{ color: "var(--muted)", marginBottom: "3rem" }}>

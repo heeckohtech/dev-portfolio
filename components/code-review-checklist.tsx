@@ -7,7 +7,7 @@ const CHECKLIST = {
   Accessibility: ["Keyboard navigation works", "Semantic HTML used", "Images have alt text"],
   "Code Quality": ["Meaningful naming", "Sensible file/component structure", "No obviously duplicated logic"],
   "Responsive Design": ["Works on mobile width", "Works on tablet width", "Works on desktop width"],
-  Performance: ["Images are reasonably sized/optimized", "No unnecessary dependencies added"],
+  Performance: ["Images are reasonably sized and optimised", "No unnecessary dependencies added"],
   Documentation: ["README explains what the project does", "Setup instructions included", "Deployment instructions included (if deployed)"],
 };
 
