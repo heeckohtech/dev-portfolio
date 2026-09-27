@@ -3,6 +3,7 @@ import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import type { Metadata, Viewport } from "next";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -22,8 +23,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dev-portfolio-beta-sandy.vercel.app"), // update once you know your real Vercel URL
+  metadataBase: new URL("https://dev-portfolio-beta-sandy.vercel.app"), 
   title: {
     default: "Wahab — Developer & Learner",
     template: "%s — Wahab",
